@@ -1,0 +1,1457 @@
+html, body {
+  overflow-x: hidden;
+  background: linear-gradient(white,80%,cornsilk);
+}
+
+.night {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+.star::before,
+.star::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255, 215, 0, 0), gold, rgba(255, 215, 0, 0));
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.8));
+  border-radius: 50%;
+  opacity: 1;
+}
+
+/* Vertical glow */
+.star::before {
+  width: 2px;
+  height: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Horizontal glow */
+.star::after {
+  width: 25px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Twinkling animation */
+@keyframes twinkle {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Example positions and delays */
+.star1 { top: 20%; left: 30%; animation-delay: 0s; }
+.star2 { top: 50%; left: 60%; animation-delay: 1.5s; }
+.star3 { top: 10%; left: 70%; animation-delay: 2s; }
+.star4 { top: 80%; left: 20%; animation-delay: 0.8s; }
+.star5 { top: 65%; left: 40%; animation-delay: 1.2s; }
+.star6 { top: 30%; left: 80%; animation-delay: 2.5s; }
+.star7 { top: 40%; left: 10%; animation-delay: 1.8s; }
+.star8 { top: 15%; left: 50%; animation-delay: 3s; }
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.explore-btn {
+  background: #dabf18;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(113, 102, 2, 0.3);
+}
+
+.explore-btn:hover {
+  background: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(113, 102, 2, 0.4);
+}
+        
+hr {
+  border: none;
+  height: 1px;
+  background: #e0e0e0; /* soft gray */
+  margin: 40px auto;
+  width: 80%;
+}
+
+.scroll-down-indicator {
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #006644;
+  animation: bounce 2s infinite;
+  display: inline-block;
+}
+
+/* Animation for arrow bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Optional: fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.benefits-section {
+  padding :4.5rem 0;
+  padding-top:1rem ;
+  background:linear-gradient(cornsilk,80%,color(srgb 0.9981 0.9635 0.8117));
+}
+
+.benefits-section hr{
+  margin-top: 1.5rem;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  background: green;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For better compatibility */
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.4s ease;
+  position: relative;
+  text-align: left;
+  min-height: 250px;
+
+  /* 👇 New additions for equal height cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card {
+  border: 1px solid transparent;
+  position: relative;
+  background-clip: padding-box;
+}
+
+/*.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(45deg, #2020207a, #21212174);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}*/
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 102, 68, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;   /* Fix: vertically center */
+  justify-content: center; /* already correct: horizontally center */
+  transition: transform 0.3s ease;
+  border: 1px solid darkgreen;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #0d0d0d;
+  position: relative;
+  text-align: left;
+  padding-bottom: 0.5rem;
+  padding-top: 1.2rem;
+}
+
+.cater-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+}
+
+.card-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #555;
+}
+
+/* Responsive Typography */
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
+/*Header css*/
+.site-header {
+  padding: 1rem;
+  background: linear-gradient(cornsilk,80%,color(srgb 0.9981 0.9635 0.8117));;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09) !important;
+}
+
+/* Logo image */
+.site-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* Brand name */
+#name {
+  color: #D4AF37 !important;
+  font-weight: bold;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* More responsive */
+  margin-left: 0.75rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+  #name {
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* How It Works
+- If the element is block-level (like <div>), it expands to fill the available space within its parent.
+- If the element is inline (like <span>), it shrinks to fit its content.
+- If the element has padding, borders, or margins, width: auto; ensures they are considered in the final width calculation.
+ */
+
+
+/* Navbar container*/
+#navbar-div {
+  width: auto; 
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #555;
+  font-weight:500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #D4AF37 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Mobile optimizations */
+@media (max-width: 767.98px) {
+  #name {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 80%;
+  max-width: 300px;
+  background: linear-gradient(to bottom, #fff8dc, #fcebbd);
+  box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  padding: 2rem;
+}
+
+#side-menu.active {/*if the side-menu element has active in their class list-modified in js*/
+  right: 0;/*moves the element to the right edge of its container.*/
+}
+
+#close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;/*removes an element from the normal document flow and positions it relative to its nearest positioned ancestor (an element with position: relative;, absolute;, or fixed;). If no such ancestor exists, it positions relative to the <html> element.*/
+  top: 1rem;
+  right: 1rem;
+}
+
+#side-menu ul {
+  list-style: none;/*remove bullets*/
+  padding: 0;
+  margin-top: 3rem;
+}
+
+#side-menu ul li {/*for all li in element of id side-menu*/
+  margin: 1rem 0;
+}
+
+#side-menu ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
+
+#side-menu ul li a:hover {
+  color: #D4AF37;
+  text-decoration: none;
+}
+
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 998;
+}
+
+#menu-overlay.active {
+  display: block;
+}
+
+/*ensures hamburger button icon is aligned and small */
+#menu-toggle img {
+  width: 24px;
+  height: 24px;
+  display: inline-block;/*- Makes the element behave like an inline element, but allows it to have block-level properties (like width and height).*/
+  vertical-align: middle;
+}
+/*An inline element in HTML is an element that does not start on a new line and only takes up as much width as necessary. Unlike block elements, which span the full width of their container, inline elements flow within the text.
+Examples of Inline Elements
+✅ <span> – Used for styling small portions of text.
+✅ <a> – Links that appear inline with surrounding text.
+✅ <strong> / <em> – Bold and italic text formatting.
+✅ <img> – Images that appear inline with text.
+*/
+
+/*dropdown link - Courses*/
+.dropdown-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.4rem 0; /* Was 0.8rem */
+}
+
+/* Arrow icon */
+.dropdown-icon {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Submenu container */
+.side-submenu {
+  display: none;/*completely hides an element from the pag*/
+  list-style: none;
+  padding-left: 1.5rem;
+  margin: 0.1rem 0 0.2rem; /* Reduced top and bottom margin */
+  border-left: 2px solid #D4AF37;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* Submenu visible */
+.side-submenu.show {
+  display: block;/*makes an element behave as a block-level element, meaning it takes up the full width of its parent container and starts on a new line.*/
+}
+
+/* Submenu links */
+.side-submenu li a {
+  display: block;
+  font-size: 1rem;
+  color: #444;
+  padding: 0.4rem 0 0.4rem 1rem; /* top, right, bottom, left */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+
+/* Hover effect */
+.side-submenu li a:hover {
+  color: #D4AF37;
+}
+
+.side-submenu li a::before {/* modifies the before pseudo-element (::before) of <a> links inside <li> items within .side-submenu.*/
+  content: " ";/*space is pseudo element here*/
+  margin-right: 0.5rem;
+  color: #D4AF37;
+}
+
+
+/* Optional: rotate icon when open */
+.dropdown-link.open .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/*removes bottom spacing from Courses link */
+#courses-toggle {
+  margin-bottom: 0;
+  padding-bottom: 0.2rem; /* optional fine-tune */
+}
+
+/* Reduce top margin of submenu */
+#courses-dropdown.side-submenu {
+  margin-top: 0;
+}
+
+.section1 {
+  position: relative;
+  overflow: hidden; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 85%;
+  gap: 3rem; /* Adjust this value to control spacing */
+  padding: 2rem 15%;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  background: green;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For better compatibility */
+  background-clip: text;
+  color: transparent;
+
+  /*background: linear-gradient(270deg, #006644, #00aa88, #006644);
+  background-size: 200% auto;
+  animation: gradientMove 4s linear infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;*/
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+.hero-content p {
+  font-size: 1.2em;
+  color: #444;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 360px;
+  border-radius: 12px;
+}
+.hero-content,
+.hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+#Explore-button{
+    background-color: #D4AF37;
+    color: white;
+    border-radius: 10px;
+    font-weight:bold;
+    font-size: 16px;
+    padding: 16px;
+    /*padding: 1rem;If the root font size is 16px, then 1rem = 16px of padding*/
+    text-decoration: none;
+    transition: background 0.3s ease;
+    /*border : 1px solid black;*/
+}
+
+#Explore-button:hover{
+    background-color:#b08a2e;
+}
+
+/* Basic styling for the about section */
+.about-section {
+    padding: 6% 0;
+    padding-top: 1.4%;
+    background:cornsilk;
+    font-family: Arial, sans-serif;
+}
+
+.team-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  margin-left: -2px;
+  padding: 0.7rem 2rem;
+  background: linear-gradient(to right, #dabf18, #dabf18);
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(234, 222, 0, 0.2);
+}
+
+.team-link:hover {
+  background: linear-gradient(to right, #d4af36, #d4af36);
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width:768px){
+   .about-section{
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.about-text h1 {
+    font-size: 1.5em;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content{
+      padding: 5%;
+    }
+    
+    .logo img {
+        margin-bottom: 20px;
+    }
+}
+
+.team-section {
+  padding: 4rem 2rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  background-color: white;
+}
+
+.team-grid.center-team {
+  display: flex !important;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/*.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}*/
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1000px; /* controls maximum width */
+  margin: 0 auto;
+}
+
+.team-subtitle{
+  color:black;
+  font-weight: bold;
+}
+
+.team-card {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 280px;
+  height: 280px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.team-card:hover .card-inner,
+.team-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.109);
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border : 1px solid rgba(128, 128, 128, 0.499);
+}
+
+.card-front img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.card-front h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.card-front p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back h4 {
+  margin-bottom: 0.5rem;
+  color: #008001;
+}
+
+.card-back p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background:	linear-gradient(to bottom, #fff8dc, #fcebbd);
+  padding: 4rem 1rem;
+  min-height: 80vh;
+}
+
+.why-choose-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+@media (max-width: 950px) {
+  .section1 {
+    flex-direction: column;
+    min-height: 20vh;
+    text-align: center;
+    padding: 3rem 1rem;
+    padding-top: 2rem;
+  }
+
+  .why-choose-us {
+    background:	linear-gradient(to bottom, #fff8dc, #fcebbd);
+    padding: 4rem 1rem;
+    min-height: 40vh;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 240px;
+    margin-top: 1rem;
+  }
+
+  .hero-content h1{
+      font-size: 1.5rem;
+    }
+}
+.section-header h2 {
+  background: green;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For better compatibility */
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.course-cards-grid{
+  display: grid;/*gives css grid layout*/
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  background: green;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For better compatibility */
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #006644;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #006644, transparent);
+  margin: 0 auto;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 3rem 0;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .card {
+    padding: 1rem 1rem;
+  }
+
+  .benefits-section hr{
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+/*
+-grid-template-columns-
+This defines how many columns your grid will have and how wide each should be.
+
+repeat(auto-fit, …)
+This means:
+"Repeat the following column definition as many times as will fit in the container."
+auto-fit = automatically fits as many columns as possible based on the available space.
+
+It collapses empty tracks if there’s not enough content.
+-minmax(280px, 1fr)-
+This defines a flexible column size:
+min = 280px → the minimum width of each column.
+max = 1fr → the column can grow and take up 1 fractional unit of remaining space.
+
+So, each column:
+
+Is at least 280px wide.
+Can grow if there's extra space.
+Wraps to the next row if there's not enough spac*/
+
+#testimonials{
+  background: linear-gradient(cornsilk,80%,color(srgb 0.9981 0.9635 0.8117));;
+}
+
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.testimonial-author {
+  font-size: 0.95rem;
+  background: green;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For better compatibility */
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.client-info p {
+    margin: 3px 0 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.contact-section {
+  padding: 80px 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.contact-section p {
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%; /* Ensures form takes full width */
+  max-width: 500px; /* Limits width on larger screens */
+  padding: 0 15px; /* Adds padding on sides */
+  box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none; /* Optional: removes default browser outline */
+  border: 2px solid #D4AF37; /* Change to your preferred border color */
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+  
+  .form-div {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Utility Classes */
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.wave-separator {
+  line-height: 0;
+  background: transparent;
+}
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==== CAROUSEL STYLING ==== */
+#teachersCarousel {
+  padding: 40px 0;
+  padding-top: 0px;
+  border-radius: 12px;
+}
+
+.carousel-item .row {
+  padding: 26px 15px;
+  padding-top: 2px;
+}
+
+@media (min-width: 768px) {
+  .carousel-item .col-md-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.custom-carousel-btn {
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 100px;
+  height: 60px;
+}
+
+.carousel-control-prev {
+  left: -30px; /* or adjust more like -50px */
+}
+
+.carousel-control-next {
+  right: -30px; /* or adjust */
+}
+
+.custom-carousel-btn:hover {
+  background-color: #fefae0;
+  border-color: #bbb;
+  transform: scale(1.05);
+}
+
+/* ==== RESPONSIVE TOUCHUPS ==== */
+@media (max-width: 767px) {
+  .teacher-card {
+    margin: 16px 0;
+  }
+
+  #teachersCarousel .carousel-item .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #teachersCarousel .col-md-4 {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  #teachersCarousel .carousel-item .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #teachersCarousel .col-md-6 {
+    max-width: 90%;
+  }
+}
+
+/* ==== SECTION SEPARATOR (Optional) ==== */
+.section-heading hr {
+  width: 80px;
+  border: 2px solid #006644;
+  margin: 0 auto 24px;
+}
+ 
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-tooltip {
+  position: absolute;   /* remove it from flex flow */
+  right: 80px;          /* position it left of the button */
+  bottom: 15px;
+  background: #f5f7fa;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Show tooltip on hover */
+.whatsapp-container:hover .whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* WhatsApp circular button */
+.whatsapp-float {
+  width: 66px;
+  height: 66px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  font-size: 38px;
+  text-align: center;
+  padding-left: 1px;
+  line-height: 58px;
+  z-index: 999;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* WhatsApp icon style */
+.whatsapp-float i {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+  background-color: #20c25e;
+}
+  
+.testimonial-card {
+  background: white;
+  border: 0.5px solid gray;
+  border-left: 5px solid #D4AF37;
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: #D4AF37;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.cater-section {
+  padding: 8rem 10%;
+  text-align: center;
+  background-color: white;
+}
+
+.cater-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cater-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border : 1px ridge rgba(128, 128, 128, 0.487) ;
+}
+
+.cater-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cater-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.cater-card p {
+  font-size: 0.95rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+.btn {
+  margin-top: 0rem;
+  display: inline-block;
+  background-color: #dabf18;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d4af36;
+  color:white;
+}
+
+.books-section {
+  padding: 4rem 10%;
+  background-color: white;
+  text-align: center;
+}
+
+.books-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.book-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.03);
+}
+
+.book-card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.book-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.book-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight:bold;
+  background-color: #dabf18;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #d4af36;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background-color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: gray;
+}     

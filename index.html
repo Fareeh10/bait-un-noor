@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><!-- supports a wide range of characters, including special symbols and non-English text.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!---  controls the viewport settings for responsive design, ensuring the page scales well on different screen sizes.-->
+  <meta name="description" content="Bait An Noor offers Islamic online courses for kids, including Quran, Arabic, and Islamic studies."><!--SEO-->
+  
+
+  <title>BAIT AN NOOR</title>
+  <link rel="icon" href="images/bait_an_noor.png">
+
+  <!--css files-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body> 
+
+  <header class="site-header py-3">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+
+        <!-- Logo & Title -->
+        <div data-aos="fade-right" data-aos-duration="1000" class="col-10 col-lg-6 d-flex align-items-center">
+          <img src="images/bait_an_noor.png" alt="Bait An Noor Logo"x class="site-logo mr-2">
+          <h3 id="name" class="mb-0">BAIT AN NOOR</h3>
+        </div>
+        <!--d-flex makes div a flex container--> 
+        <!--align-items-center is a Bootstrap utility class that applies align-items: center; to a flex container. This ensures that all child elements inside the container are vertically centered.-->
+
+        <!-- Hamburger Menu (Visible only on small screens) -->
+        <div class="col-2 d-lg-none text-right">
+          <button id="menu-toggle" aria-label="Toggle navigation" class="btn p-0 border-0 bg-transparent">
+            <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" alt="Menu icon" />
+          </button>
+        </div>
+        <!--text-right aligns text within an element to left-->
+
+        <!-- Desktop Navbar (hidden on small screens) -->
+        <div data-aos="fade-left" data-aos-duration="1000" class="col-md-6 d-none d-lg-block" id="navbar-div">
+          <nav class="navbar navbar-expand navbar-light p-0 bg-transparent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="#section1">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section2">Why us?</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section3">About us</a></li>
+              <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!--side menu for sm and xs only-->
+        <div id="side-menu" class="d-lg-none">
+          <button id="close-button">&times;</button><!--times represent x-->
+          <ul>
+              <li><a href="#section1">Home</a></li>
+              <li><a href="#section2">Why us?</a></li>
+              <li><a href="#section3">About us</a></li>
+              <li><a href="#testimonials">Testmonials</a></li>
+              <li><a href="#contact">Contact us</a></li>
+          </ul>
+        </div>
+        <!-- Add overlay right here -->
+        <div id="menu-overlay" class="d-lg-none"></div>
+      </div>
+  </header>
+  
+
+
+  <section data-aos="zoom-in" data-aos-duration="1000" class="section1" id="section1">
+  
+  <!--<div class="night">
+  <div class="star star1"></div>
+  <div class="star star2"></div>
+  <div class="star star3"></div>
+  <div class="star star4"></div>
+  <div class="star star5"></div>
+  <div class="star star6"></div>
+  <div class="star star7"></div>
+  <div class="star star8"></div>
+</div>-->
+
+  <div class="hero-content">
+      <h1>Shaping Bright Minds with Faith & Knowledge</h1>
+      <p>At Bait An Noor, children explore the beauty of Faith through joyful online learning where character, values, and understanding grow hand in hand.</p>
+      <br><button class="explore-btn">Register Now</button>
+  </div>
+
+  <div class="hero-image">
+      <img src="images/quran.png" alt="Quran image" />
+  </div> 
+
+</section>
+  
+
+<section class="benefits-section" id="section2">
+  <div class="scroll-down-indicator">
+    <span class="arrow">&#x25BC;</span> 
+  </div>
+  <div class="container">
+    <div class="section-intro">
+      <!--<span class="section-badge">Our Advantages</span>-->
+      <h2 class="section-title">Why Choose Bait An Noor</h2>
+      <p class="section-description">Discover the unique benefits of our holistic Islamic education approach that nurtures both knowledge and character.</p>
+    </div>
+
+
+    <div class="cards-grid">
+      <div class="card" data-aos="fade-up" data-aos-duration="1000">
+        
+        <div class="card-icon">
+          <img src="icons/quran (1).png" alt="Quran" loading="lazy" width="30" height="30">
+        </div>
+        
+        <h3 class="card-title">Comprehensive Curriculum</h3>
+        <p class="card-desc">Integrated study of Qur’an, Arabic, Seerah, and Islamic Manners in a cohesive journey</p>
+        <div class="card-hover-effect"></div>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-duration="1000">
+
+        <div class="card-icon">
+          <img src="icons/13441804.png" alt="Visual Learning" loading="lazy" width="30" height="30">
+        </div>
+        
+        <h3 class="card-title">Engaging Visual Learning</h3>
+        <p class="card-desc">Interactive lessons enhanced with illustrations and storytelling for better retention.</p>
+        <div class="card-hover-effect"></div>
+      </div>
+
+
+      <div class="card" data-aos="fade-up" data-aos-duration="1000">
+
+        <div class="card-icon">
+          <img src="icons/muslim.png" alt="Teachers" loading="lazy" width="30" height="30">
+        </div>
+        
+        <h3 class="card-title">Certified Educators</h3>
+        <p class="card-desc">Passionate teachers who combine Islamic knowledge with modern pedagogical techniques.</p>
+        <div class="card-hover-effect"></div>
+      </div>
+
+
+      <div class="card" data-aos="fade-up" data-aos-duration="1000">
+
+        <div class="card-icon">
+          <img src="icons/bonsai.png" alt="Character" loading="lazy" width="30" height="30">
+        </div>
+        
+        <h3 class="card-title">Character Development</h3>
+        <p class="card-desc">Holistic approach nurturing both Islamic knowledge and moral character formation.</p>
+        <div class="card-hover-effect"></div>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-duration="1000">
+
+        <div class="card-icon">
+          <img src="icons/schedule.png" alt="Assessments" loading="lazy" width="30" height="30">
+        </div>
+        
+        <h3 class="card-title">Progress Tracking</h3>
+        <p class="card-desc">Regular assessments with detailed feedback to monitor your child's development.</p>
+        <div class="card-hover-effect"></div>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-duration="1000">
+
+        <div class="card-icon">
+          <img src="icons/laptop (3).png" alt="Flexibility" loading="lazy" width="30" height="30">
+        </div>
+        
+        <h3 class="card-title">Flexible Learning</h3>
+        <p class="card-desc">Accessible from anywhere with schedules designed for busy family routines.</p>
+        <div class="card-hover-effect"></div>
+      </div>
+    </div>  
+</section>
+
+<section class="cater-section" id="cater">
+  <h2 class="section-title">Whom Do We Cater?</h2>
+  <p class="section-subtitle">Tailored Islamic learning experiences for every stage of life.</p>
+
+  <div data-aos="fade-up" data-aos-duration="1000" class="cater-cards">
+    <!-- Kids -->
+    <div class="cater-card">
+      <img src="images/international-childrens-day-2.png" alt="Kids Icon" class="cater-icon">
+      <h3>Kids (7–11)</h3>
+      <p>Engaging Qur'an, Arabic, Seerah, and character lessons built for young learners.</p>
+      <a href="#kids-details" class="btn">Click for more details</a>
+    </div>
+
+    <!-- Teens -->
+    <div data-aos="fade-up" data-aos-duration="1000" class="cater-card">
+      <img src="images/woman-5.png" alt="Teens Icon" class="cater-icon">
+      <h3>Teens (12–18)</h3>
+      <p>Deeper learning in Qur'an, Tajweed, Fiqh, Hadith, and life values for growing minds.</p>
+      <a href="#teens-details" class="btn">Click for more details</a>
+    </div>
+
+    <!-- Adults -->
+    <div data-aos="fade-up" data-aos-duration="1000" class="cater-card">
+      <img style = "height: 56px;width: 57px;" src="images/woman-6.png" alt="Adult Woman Icon" class="cater-icon">
+      <h3>Adults</h3>
+      <p>Supportive and practical Islamic education for women and adult learners seeking growth.</p>
+      <a href="#adult-details" class="btn">Coming soon</a>
+    </div>
+  </div>
+</section>
+
+<!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#006644">
+            <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+          </svg><div style="background-color: cornsilk" class="wave-separator">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="waveGradient" x1="100%" y1="0%" x2="0%" y2="0%">
+        "to left" means from right (100%) to left (0%) 
+        <stop offset="0%" stop-color="#f9f6ed" />
+        <stop offset="100%" stop-color="#ffffff" />
+      </linearGradient>
+    </defs>
+    <path d="M0,40 C480,80 960,0 1440,40 L1440,100 L0,100 Z" fill="url(#waveGradient)"></path>
+  </svg>
+</div>-->
+
+<div style="background:white;;" class="wave-separator">
+  <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+    <path d="M0,60 C480,200 960,-80 1440,60 L1440,160 L0,160 Z" fill="cornsilk"></path>
+  </svg>  
+</div>
+
+<section class="about-section" id="section3">
+  <div class="container">
+    <div data-aos="zoom-in" data-aos-duration="1000" class="about-content">
+      <div class="logo">
+        <img src="images/bait_an_noor.png" alt="Bait An Noor Logo">
+      </div>
+      <div data-aos="fade-left" data-aos-duration="1000" class="about-text">
+        <h1 class="section-title" >About Us</h1>
+        <p>
+          Bait An Noor LiTarbiyyah (BNT) is an online initiative committed to shaping young minds through Islamic values and islamic knowledge. Our structured, visually engaging classes in Qur’an, Arabic, Seerah, and character-building are designed to foster spiritual awareness, moral clarity, and intellectual growth in every child we teach.
+        </p>
+        <a href="meet-our-team.html" class="team-link">
+          Know More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="books" class="books-section">
+  <h2 class="section-title">Books</h2>
+  <p class="books-subtitle">Explore our collection of thoughtfully curated Islamic books — some available for free download, others available for purchase.</p>
+
+  <div class="books-grid">
+
+    <!-- Book 2 -->
+    <div data-aos="fade-up" data-aos-duration="1000"  class="book-card">
+      <img src="images/image copy 4.png" alt="Book Title 2">
+      <h3>Simple Seerah</h3>
+      <p>A powerful narrative-driven book exploring the Seerah of Prophet ﷺ</p>
+      <a href="#" class="book-btn">Buy Now</a>
+    </div>
+
+    <!-- Book 3 -->
+    <div data-aos="fade-up" data-aos-duration="1000"  class="book-card">
+      <img src="images/image copy 6.png" alt="Book Title 3">
+      <h3>Fiqh Made Easy</h3>
+      <p>A guide for adults covering the essentials of everyday Islamic practice.</p>
+      <a href="#" class="book-btn">Buy Now</a>
+    </div>
+
+    <!-- Book 1 -->
+    <div data-aos="fade-up" data-aos-duration="1000" class="book-card">
+      <img src="images/image copy 5.png" alt="Book Title 1">
+      <h3>The Dua Book</h3>
+      <p>A simple, colorful book teaching daily duas</p><br>
+      <a href="books/my-first-dua.pdf" class="book-btn" download>Download Free</a>
+    </div>
+
+  </div>
+</section>
+
+<div style="background:white;;" class="wave-separator">
+  <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+    <path d="M0,60 C480,200 960,-80 1440,60 L1440,160 L0,160 Z" fill="cornsilk"></path>
+  </svg>  
+</div>
+
+<section id="testimonials" class="testimonials-section pt-5 pb-5">
+  <div class="container text-center">
+    <h2 class="mb-4 section-title">What Parents Are Saying</h2>
+    <p class="text-muted mb-5">Real stories from families who trust Bait An Noor</p>
+
+    <div class="row">
+      <!-- Testimonial 1 -->
+      <div data-aos="fade-left" data-aos-duration="60" class="col-lg-4 mb-4">
+        <div class="testimonial-card p-4 ">
+          <div class="quote-icon mb-3">❝</div>
+          <p class="testimonial-text">My daughter looks forward to every class. She's not only learning Islam but loving it too!</p>
+          <h6 class="mt-4 mb-0 font-weight-bold" style = "color: #D4AF37;">– Ayesha N.</h6>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div data-aos="fade-left" data-aos-duration="60" class="col-lg-4 mb-4">
+        <div class="testimonial-card p-4 shadow-sm rounded">
+          <div class="quote-icon mb-3">❝</div>
+          <p class="testimonial-text">I’ve seen a big improvement in my son’s manners and interest in Islamic studies. JazakAllah Khair!</p>
+          <h6 class="mt-4 mb-0 font-weight-bold" style = "color: #D4AF37;" >– Imran A.</h6>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div data-aos="fade-left" data-aos-duration="60" class="col-lg-4 mb-4">
+        <div class="testimonial-card p-4 shadow-sm rounded">
+          <div class="quote-icon mb-3">❝</div>
+          <p class="testimonial-text">Amazing teachers, thoughtful curriculum, and a warm online community for my kids.</p>
+          <h6 class="mt-4 mb-0 font-weight-bold" style = "color: #D4AF37;" >– Zainab K.</h6>
+        </div>
+      </div>
+
+  
+    </div>
+  </div>
+</section>
+
+
+<section style="background: white" class="contact-section" id="contact">
+  <div data-aos="fade-up" data-aos-duration="1000" class="container">
+    <h2 class="section-title" >Contact Us</h2>
+    <p>If you have any questions or want to enroll your child, feel free to reach out!</p>
+
+    <div class="form-div">
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <br>
+    <div class="contact-info-div">
+        <p><strong>Email:</strong> baitannoor@gmail.com</p>
+        <p><strong>Phone/WhatsApp:</strong> +91 98765 43210</p>
+        <p><strong>Classes:</strong> Online</p>
+    </div>
+    
+  </div>
+</section>
+
+<footer>
+    &copy; 2025 Bait an Noor. All rights reserved.
+  </footer>
+	
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    duration: 1000,     // Animation duration
+    once: true,         // Animate only once
+    offset: 100,        // Offset from the bottom before triggering
+  });
+  </script>
+
+<!--	
+  •	fade-up
+	•	zoom-in
+	•	fade-right
+	•	flip-left
+	•	slide-up
+	•	and more…-->
+  <!-- Floating WhatsApp Button -->
+
+
+</body>
+</html>
+
+<!--<a href="https://www.flaticon.com/free-icons/curriculum-vitae" title="curriculum-vitae icons">Curriculum-vitae icons created by Freepik - Flaticon</a>-->
+<!--<a href="https://www.freepik.com/free-vector/hand-drawn-tasbih-illustration_22432656.htm#fromView=keyword&page=1&position=0&uuid=f9416df4-23a3-4827-8d8d-9956b07dafa8&query=Al+Quran">Image by freepik</a>-->
