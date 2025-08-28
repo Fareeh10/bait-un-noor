@@ -92,6 +92,8 @@ html,body {
 
 .explore-btn:hover {
   background: #D4AF37;
+  color: white;
+  text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 25px rgba(113, 102, 2, 0.4);
 }
