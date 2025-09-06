@@ -275,7 +275,7 @@ header {
 }
 
 /* Mobile */
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .enroll-btn2, .enroll-btn{
     font-size: 15px;
     padding: 0.7rem 1.65rem;
