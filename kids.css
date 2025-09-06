@@ -1,0 +1,302 @@
+.kids{
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    display:grid;
+    justify-content: center;
+}
+
+.kid-icon{
+  height:50px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.kid-card{
+  border: 1px solid rgba(128, 128, 128, 0.55);
+  padding:1.2rem;
+  width:250px;
+  height:250px;
+  border-radius:25px;
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.kid-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  /*background-color: #d4af3613;*/
+}
+
+.kid-card h3{
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0d0d0d;
+}
+
+.kid-cards{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:30px;
+  max-width:1200px;
+}
+
+.kid-card p{
+  margin-bottom:0px;
+  transition: transform 0.3s ease;
+}
+
+.smaller-title{
+    font-size: 2rem;
+    color:#D4AF37;
+    font-weight: 700;
+    margin-bottom:1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .smaller-title {
+    font-size: 1.4rem;   /* Slightly smaller on tablets */
+  }
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/Lalezar-Regular.woff2') format('woff2'),
+       url('fonts/Lalezar-Regular.woff') format('woff'),
+       url('fonts/Lalezar-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.banner {
+  background-color:#D4AF37 ;
+  min-height:40vh;
+  font-family:MyFont;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:2rem;
+  gap:3rem;
+}
+
+@media (max-width:570px){
+  .kid-cards{
+    display:grid;
+    grid-template-columns: auto;
+  }
+}
+
+.banner-img-div{
+  display:flex;
+  align-items:center;
+  justify-content: right;
+}
+
+.banner-img-div img{
+  width:clamp(100px,180px,300px);
+}
+
+.banner-title {
+  color:white;
+  text-align:left;
+  font-size:clamp(45px,100px,101px);
+  line-height: 5rem;
+}
+
+.banner-subtitle {
+  font-size: 1.2rem;
+  color: black;
+  text-align:left;
+}
+
+.para-2{
+  display: none;
+}
+
+@media (max-width:760px){
+  .para-2{
+    display: block;
+  }
+
+  .para-1{
+    display: none;
+  }
+}
+
+@media (max-width:700px){
+  .banner{
+    flex-direction: column;
+    gap:15px;
+  }
+}
+
+.sub-card{
+  padding:1.9rem;
+  padding-top: 2.2rem;
+  border-radius:25px;
+  display:grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top:30px;
+}
+
+.sub-card h3{
+  font-family:Myfont;
+  margin:0px;
+  line-height:0px;
+  color:black;
+}
+
+#class-schedule{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:50px;
+  margin-bottom:10px;
+}
+
+.schedule-card{
+  width:18rem;
+  height:18rem;
+  border: 1px solid rgba(128, 128, 128, 0.55);
+  border-radius: 25px;
+  padding:20px;
+}
+
+/*.schedule-card:hover{
+  transform: scale(1.05,1.05);
+}*/
+.schedule-card h3{
+  background-color: #D4AF37;
+  border-radius: 25px;
+  padding:25px;
+  padding-top:30px;
+  color:white;
+  font-family: Myfont;
+  line-height: 0px;
+}
+
+.p-div{
+  font-family: Myfont;
+  line-height:25px;
+  font-size:25px;
+  color:#4B4B4B;
+  margin-top:40px;
+}
+
+/* Section Title */
+.timing {
+  background:#d4af37;
+  border-radius: 40px;
+  padding: 15px 40px;
+  color: white;
+  font-family: Myfont, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: inline-block;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Pricing Heading */
+.sub-card {
+  margin: 20px auto;
+  text-align: center;
+}
+.sub-card h3 {
+  font-family: Myfont, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+/* Pricing Container */
+#pricing-div {
+  text-align: center;
+  font-family: Myfont;
+  margin-top: 20px;
+}
+
+/* Individual Price Card */
+.price-card {
+  background: #fff;
+  border: 2px solid #d4af37;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.price-card h4 {
+  margin: 0;
+  margin-top: 16px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+}
+.price-card p {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  color: #333;
+}
+
+/* Highlighted Gold */
+.gold {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* Enroll Button */
+.enroll-btn {
+  background:#d4af37;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.enroll-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.enroll-btn {
+background: #D4AF37;
+color: white;
+font-size: 1.3rem;
+padding: 24px;
+padding-top: 28px;
+border: none;
+border-radius: 25px;
+max-width: 400px;
+line-height: 0px;
+margin: auto;
+margin-top: 20px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 20px rgba(113, 102, 2, 0.3);
+font-family: Myfont;
+}
+
+.enroll-btn:hover {
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(113, 102, 2, 0.4);
+}
